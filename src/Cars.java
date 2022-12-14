@@ -13,13 +13,13 @@ public class Cars {
     }
 
     Cars (String brand, String model, double engineVolume, String color, int year, String country){
-        if (brand==null^ Objects.equals(brand,"")){this.brand="No info";}
-        if (color==null^ Objects.equals(color,"")){this.color="No info";}
-        if (country==null^ Objects.equals(country,"")){this.country="No info";}
-        this.year = Math.max(year, 0);
         //noinspection ManualMinMaxCalculation
         if (engineVolume<=0.0) {this.engineVolume=0.0;} else { this.engineVolume=engineVolume; }
-        if (model==null^ Objects.equals(model,"")){this.model="No info";}
+        this.year = Math.max(year, 0);
+        if (brand==null^ Objects.equals(brand,"")){this.brand="No info";}       else{ this.brand=brand; }
+        if (color==null^ Objects.equals(color,"")){this.color="No info";}       else{ this.color=color; }
+        if (country==null^ Objects.equals(country,"")){this.country="No info";} else{ this.country=country; }
+        if (model==null^ Objects.equals(model,"")){this.model="No info";}       else{ this.model=model; }
     }
 
     @Override
